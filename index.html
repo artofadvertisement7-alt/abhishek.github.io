@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abhishek Ad Studio — Premium Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0ff;
+      --primary-dark:#06f;
+      --bg:#0a0f1e;
+      --card:#1a1f33;
+      --text:#e6eef6;
+      --muted:#94a3b8;
+      --shadow:0 20px 60px rgba(0,255,255,0.7);
+      --success:#0f0;
+    }
+    *{box-sizing:border-box;font-family:'Inter',sans-serif;transition:all 0.5s ease;}
+    body{margin:0;background:var(--bg);min-height:100vh;padding:30px;overflow-x:hidden;color:var(--text);position:relative;}
+
+    .animated-bg{
+      position:fixed;top:0;left:0;width:200%;height:200%;background:linear-gradient(45deg,var(--primary),#06f,#0f6,var(--primary),#06f,#0f6);
+      background-size:400% 400%;z-index:-1;animation:gradientMove 20s ease infinite;
+    }
+    @keyframes gradientMove{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    .container{max-width:700px;margin:0 auto;position:relative;z-index:1;}
+    header{display:flex;align-items:center;gap:20px;margin-bottom:35px;opacity:0;transform:translateY(-20px);animation:fadeIn 1s forwards;}
+    header h1{font-size:32px;margin:0;letter-spacing:1px;text-shadow:0 0 12px var(--primary);}
+    header .sub{color:var(--muted);font-size:16px;text-shadow:0 0 8px rgba(0,255,255,0.3);}
+    @keyframes fadeIn{to{opacity:1;transform:translateY(0)}}
+
+    .card{background:rgba(255,255,255,0.1);backdrop-filter:blur(30px);padding:40px 30px;border-radius:25px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.2);transform-style:preserve-3d;transition:0.5s;}
+    .card:hover{box-shadow:0 25px 80px rgba(0,255,255,0.9);transform:translateY(-5px) rotateX(3deg) rotateY(3deg);}
+
+    label{display:block;font-size:14px;color:var(--muted);margin-bottom:8px;}
+    input,select,textarea{width:100%;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);color:var(--text);font-size:15px;transition:0.4s;}
+    input:focus,textarea:focus,select:focus{border-color:var(--primary);box-shadow:0 0 20px var(--primary);outline:none;}
+    textarea{min-height:140px;}
+
+    button{background:var(--primary);border:0;padding:16px 20px;border-radius:14px;color:#042024;font-weight:700;cursor:pointer;font-size:16px;box-shadow:0 12px 50px rgba(0,255,255,0.6);transition:0.4s;text-shadow:0 0 5px #fff;}
+    button:hover{background:var(--primary-dark);transform:translateY(-3px) scale(1.05);box-shadow:0 20px 70px rgba(0,255,255,0.9);}
+
+    .muted{color:var(--muted);font-size:13px;}
+    .controls{display:flex;gap:15px;flex-wrap:wrap;align-items:center;margin-top:20px;}
+    .small{padding:10px 16px;font-size:14px;}
+    footer{margin-top:25px;color:var(--muted);font-size:14px;text-align:center;}
+
+    .success-message{
+      margin-top:20px;
+      padding:15px;
+      background:rgba(0,255,0,0.2);
+      border-left:5px solid var(--success);
+      color:var(--success);
+      border-radius:10px;
+      font-weight:600;
+      text-align:center;
+      display:none;
+      animation:fadeInSuccess 0.8s ease forwards;
+    }
+    @keyframes fadeInSuccess{from{opacity:0;transform:translateY(-10px);} to{opacity:1;transform:translateY(0);}}
+
+    @media (max-width:950px){header h1{font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="container">
+    <header>
+      <svg width="50" height="50" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="8" fill="var(--primary)"/><path d="M7 14c1.5-3 6-3 7.5 0" stroke="#042024" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <h1>Arvind Ad Studio</h1>
+        <div class="sub">Submit your business info in style</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <form id="adForm">
+        <label>Business Name</label>
+        <input id="businessName" placeholder="e.g. Arvind Electronics" required />
+
+        <label>Phone Number</label>
+        <input id="phone" placeholder="+91 98XXXXXXXX" required />
+
+        <label>Business Type</label>
+        <select id="bizType">
+          <option>Retail / Shop</option>
+          <option>Restaurant / Cafe</option>
+          <option>Service (Plumber, Electrician)</option>
+          <option>Health / Clinic</option>
+          <option>Education / Coaching</option>
+          <option>Other</option>
+        </select>
+
+        <label>Advertisement Type</label>
+        <select id="adType">
+          <option value="poster">Poster</option>
+          <option value="banner">Banner</option>
+          <option value="logo">Logo</option>
+        </select>
+
+        <label>Short Details / Tagline</label>
+        <textarea id="details" placeholder="Describe the business in 1-2 lines"></textarea>
+
+        <label>Primary Color</label>
+        <input id="primaryColor" type="color" value="#0ff" />
+
+        <div class="controls">
+          <button id="generateBtn" type="button">Submit Info</button>
+          <button id="clearBtn" type="button" class="small">Clear</button>
+        </div>
+
+        <div id="successMsg" class="success-message">Business information submitted successfully!</div>
+      </form>
+
+      <footer class="muted">Your info will be securely collected for premium ad creation.</footer>
+    </div>
+  </div>
+
+  <script>
+    const $ = id => document.getElementById(id);
+    const root = document.documentElement;
+    const primaryColorPicker = $('primaryColor');
+    const successMsg = $('successMsg');
+
+    function updateThemeColor(color){
+      root.style.setProperty('--primary', color);
+      root.style.setProperty('--primary-dark', color);
+    }
+
+    $('generateBtn').addEventListener('click',()=>{
+      updateThemeColor(primaryColorPicker.value);
+      successMsg.style.display='block';
+      successMsg.style.opacity='0';
+      setTimeout(()=>{successMsg.style.opacity='1';},50);
+      setTimeout(()=>{successMsg.style.display='none';},4000);
+    });
+
+    $('clearBtn').addEventListener('click',()=>{$('adForm').reset(); successMsg.style.display='none';});
+    primaryColorPicker.addEventListener('input',(e)=>{updateThemeColor(e.target.value);});
+  </script>
+</body>
+</html>
