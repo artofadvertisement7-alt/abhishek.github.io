@@ -1,19 +1,25 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="google-site-verification" content="ym0sI3D6TCNZviOC1ryAURFXJ7SZ5yKGP2MHxezA1eQ" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Verification -->
+<meta name="google-site-verification" content="ym0sI3D6TCNZviOC1ryAURFXJ7SZ5yKGP2MHxezA1eQ">
+
+<!-- SEO Meta Tags -->
 <meta name="description" content="Arvind Ad Studio provides professional logo design, poster design, banner design and advertising services for businesses.">
+<meta name="keywords" content="logo design, poster design, banner design, advertising agency, advertisement design">
+<meta name="author" content="Arvind Raj">
+<meta name="robots" content="index, follow">
 
-<meta name="keywords" content="logo design, advertisement design, banner design, poster design, advertising agency">
-
-<meta name="author" content="Arvind Ad Studio">
-<title>Arvind Ad Studio — Premium Form</title>
+<title>Arvind Ad Studio | Logo, Poster & Banner Design Services</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
 --primary:#0ff;
 --primary-dark:#06f;
@@ -24,7 +30,10 @@
 --shadow:0 20px 60px rgba(0,255,255,0.7);
 }
 
-*{box-sizing:border-box;font-family:'Inter',sans-serif;}
+*{
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
 
 body{
 margin:0;
@@ -41,13 +50,20 @@ margin:auto;
 
 header{
 display:flex;
-align-items:center;
-gap:20px;
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
 margin-bottom:30px;
 }
 
 header h1{
 margin:0;
+font-size:32px;
+}
+
+header p{
+margin:0;
+color:var(--muted);
 }
 
 .card{
@@ -91,11 +107,8 @@ button:hover{
 background:var(--primary-dark);
 }
 
-.small{
-margin-left:10px;
-background:#555;
-}
 </style>
+
 </head>
 
 <body>
@@ -103,21 +116,26 @@ background:#555;
 <div class="container">
 
 <header>
+
 <h1>Arvind Ad Studio</h1>
+
+<p>
+Professional logo, poster and banner design services for businesses, shops and startups.
+</p>
+
 </header>
 
 <div class="card">
 
 <form action="https://formsubmit.co/artofadvertisement7@gmail.com" method="POST">
 
-<!-- FormSubmit settings -->
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Advertisement Client Request">
 
 <label>Name</label>
 <input type="text" name="Name" placeholder="e.g. Arvind" required>
 
-<label>E-Mail</label>
+<label>Email</label>
 <input type="email" name="email" placeholder="e.g. client@gmail.com" required>
 
 <label>Business Name</label>
@@ -128,25 +146,31 @@ background:#555;
 
 <label>Business Type</label>
 <select name="Business Type">
+
 <option>Retail / Shop</option>
 <option>Restaurant / Cafe</option>
 <option>Service (Plumber, Electrician)</option>
 <option>Health / Clinic</option>
 <option>Education / Coaching</option>
 <option>Other</option>
+
 </select>
 
 <label>Advertisement Type</label>
 <select name="Advertisement Type">
+
 <option>Poster</option>
 <option>Banner</option>
 <option>Logo</option>
+
 </select>
 
 <label>Short Details / Tagline</label>
+
 <textarea name="Details" placeholder="Describe the business in 1-2 lines"></textarea>
 
 <label>Primary Color</label>
+
 <input type="color" name="Primary Color" value="#00ffff">
 
 <button type="submit">Submit Info</button>
@@ -158,4 +182,5 @@ background:#555;
 </div>
 
 </body>
+
 </html>
