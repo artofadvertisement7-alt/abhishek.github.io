@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Google Verification -->
 <meta name="google-site-verification" content="ym0sI3D6TCNZviOC1ryAURFXJ7SZ5yKGP2MHxezA1eQ">
 
-<!-- SEO Meta Tags -->
 <meta name="description" content="Arvind Ad Studio provides professional logo design, poster design, banner design and advertising services for businesses.">
-<meta name="keywords" content="logo design, poster design, banner design, advertising agency, advertisement design">
+
+<meta name="keywords" content="logo design, poster design, banner design, advertisement design, advertising agency">
+
 <meta name="author" content="Arvind Raj">
+
 <meta name="robots" content="index, follow">
 
 <title>Arvind Ad Studio | Logo, Poster & Banner Design Services</title>
@@ -20,91 +22,51 @@
 
 <style>
 
-:root{
---primary:#0ff;
---primary-dark:#06f;
---bg:#0a0f1e;
---card:#1a1f33;
---text:#e6eef6;
---muted:#94a3b8;
---shadow:0 20px 60px rgba(0,255,255,0.7);
-}
-
-*{
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
 body{
 margin:0;
-background:var(--bg);
-min-height:100vh;
+background:#0a0f1e;
+color:#e6eef6;
+font-family:'Inter',sans-serif;
 padding:30px;
-color:var(--text);
 }
 
 .container{
-max-width:700px;
+max-width:900px;
 margin:auto;
 }
 
-header{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-gap:10px;
-margin-bottom:30px;
-}
-
-header h1{
-margin:0;
-font-size:32px;
-}
-
-header p{
-margin:0;
-color:var(--muted);
+h1,h2{
+color:#0ff;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
+background:#1a1f33;
 padding:30px;
 border-radius:15px;
-box-shadow:var(--shadow);
+margin-bottom:30px;
 }
 
 label{
 display:block;
 margin-top:15px;
-margin-bottom:5px;
-color:var(--muted);
 }
 
 input,select,textarea{
 width:100%;
-padding:12px;
+padding:10px;
 border-radius:8px;
 border:1px solid #444;
 background:#111;
-color:#fff;
-}
-
-textarea{
-min-height:120px;
+color:white;
 }
 
 button{
 margin-top:20px;
-background:var(--primary);
+background:#0ff;
 border:0;
-padding:14px 18px;
-border-radius:10px;
-font-weight:600;
+padding:12px;
+border-radius:8px;
 cursor:pointer;
-}
-
-button:hover{
-background:var(--primary-dark);
 }
 
 </style>
@@ -115,59 +77,112 @@ background:var(--primary-dark);
 
 <div class="container">
 
-<header>
+<!-- Header -->
 
 <h1>Arvind Ad Studio</h1>
 
 <p>
-Professional logo, poster and banner design services for businesses, shops and startups.
+Professional logo, poster and banner design services for businesses,
+shops and startups.
 </p>
 
-</header>
+<!-- Services Section -->
 
 <div class="card">
+
+<h2>Our Services</h2>
+
+<ul>
+
+<li>Professional Logo Design</li>
+
+<li>Creative Poster Design</li>
+
+<li>Business Banner Design</li>
+
+<li>Advertisement Graphics for Shops and Businesses</li>
+
+</ul>
+
+</div>
+
+<!-- About Section -->
+
+<div class="card">
+
+<h2>About Us</h2>
+
+<p>
+
+Arvind Ad Studio helps businesses grow with creative and professional
+advertising designs. We design logos, posters, banners and promotional
+graphics that attract customers and make your business stand out.
+
+</p>
+
+</div>
+
+<!-- Contact Form -->
+
+<div class="card">
+
+<h2>Client Request Form</h2>
 
 <form action="https://formsubmit.co/artofadvertisement7@gmail.com" method="POST">
 
 <input type="hidden" name="_captcha" value="false">
+
 <input type="hidden" name="_subject" value="New Advertisement Client Request">
 
 <label>Name</label>
-<input type="text" name="Name" placeholder="e.g. Arvind" required>
+
+<input type="text" name="Name" required>
 
 <label>Email</label>
-<input type="email" name="email" placeholder="e.g. client@gmail.com" required>
+
+<input type="email" name="email" required>
 
 <label>Business Name</label>
-<input type="text" name="Business Name" placeholder="e.g. Arvind Electronics" required>
+
+<input type="text" name="Business Name" required>
 
 <label>Phone Number</label>
-<input type="text" name="Phone Number" placeholder="+91 98XXXXXXXX" required>
+
+<input type="text" name="Phone Number" required>
 
 <label>Business Type</label>
+
 <select name="Business Type">
 
 <option>Retail / Shop</option>
+
 <option>Restaurant / Cafe</option>
-<option>Service (Plumber, Electrician)</option>
+
+<option>Service</option>
+
 <option>Health / Clinic</option>
+
 <option>Education / Coaching</option>
+
 <option>Other</option>
 
 </select>
 
 <label>Advertisement Type</label>
+
 <select name="Advertisement Type">
 
 <option>Poster</option>
+
 <option>Banner</option>
+
 <option>Logo</option>
 
 </select>
 
-<label>Short Details / Tagline</label>
+<label>Short Details</label>
 
-<textarea name="Details" placeholder="Describe the business in 1-2 lines"></textarea>
+<textarea name="Details"></textarea>
 
 <label>Primary Color</label>
 
