@@ -31,20 +31,68 @@ padding:30px;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 }
+
+/* Navigation */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+nav a{
+color:#0ff;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* Headings */
 
 h1,h2{
 color:#0ff;
 }
+
+/* Cards */
 
 .card{
 background:#1a1f33;
 padding:30px;
 border-radius:15px;
 margin-bottom:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
+
+/* Services Grid */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.service-box{
+background:#11162a;
+padding:20px;
+border-radius:10px;
+}
+
+.service-box a{
+color:#0ff;
+text-decoration:none;
+font-weight:600;
+}
+
+/* Form */
 
 label{
 display:block;
@@ -67,6 +115,19 @@ border:0;
 padding:12px;
 border-radius:8px;
 cursor:pointer;
+font-weight:600;
+}
+
+button:hover{
+background:#06f;
+}
+
+.hero{
+margin-bottom:30px;
+}
+
+.hero p{
+color:#94a3b8;
 }
 
 </style>
@@ -77,14 +138,35 @@ cursor:pointer;
 
 <div class="container">
 
-<!-- Header -->
+<!-- Navigation -->
 
-<h1>Arvind Ad Studio</h1>
+<nav>
+
+<div><strong>Arvind Ad Studio</strong></div>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="logo-design.html">Logo Design</a>
+<a href="poster-design.html">Poster Design</a>
+<a href="banner-design.html">Banner Design</a>
+
+</div>
+
+</nav>
+
+<!-- Hero Section -->
+
+<div class="hero">
+
+<h1>Creative Advertising That Makes Businesses Stand Out</h1>
 
 <p>
-Professional logo, poster and banner design services for businesses,
-shops and startups.
+A boring design is like a shop with closed doors.  
+We create **logos, posters and banners** that attract customers and make your business shine.
 </p>
+
+</div>
 
 <!-- Services Section -->
 
@@ -92,17 +174,39 @@ shops and startups.
 
 <h2>Our Services</h2>
 
-<ul>
+<div class="services">
 
-<li>Professional Logo Design</li>
+<div class="service-box">
 
-<li>Creative Poster Design</li>
+<h3>Logo Design</h3>
 
-<li>Business Banner Design</li>
+<p>Your brand's first impression. Let's make it unforgettable.</p>
 
-<li>Advertisement Graphics for Shops and Businesses</li>
+<a href="logo-design.html">Learn More →</a>
 
-</ul>
+</div>
+
+<div class="service-box">
+
+<h3>Poster Design</h3>
+
+<p>Posters that don't just hang on walls… they grab attention.</p>
+
+<a href="poster-design.html">Learn More →</a>
+
+</div>
+
+<div class="service-box">
+
+<h3>Banner Design</h3>
+
+<p>Banners that promote your business clearly and powerfully.</p>
+
+<a href="banner-design.html">Learn More →</a>
+
+</div>
+
+</div>
 
 </div>
 
@@ -117,6 +221,13 @@ shops and startups.
 Arvind Ad Studio helps businesses grow with creative and professional
 advertising designs. We design logos, posters, banners and promotional
 graphics that attract customers and make your business stand out.
+
+</p>
+
+<p>
+
+Because good advertising attracts customers…  
+but **great advertising makes them remember you**.
 
 </p>
 
@@ -135,19 +246,15 @@ graphics that attract customers and make your business stand out.
 <input type="hidden" name="_subject" value="New Advertisement Client Request">
 
 <label>Name</label>
-
 <input type="text" name="Name" required>
 
 <label>Email</label>
-
 <input type="email" name="email" required>
 
 <label>Business Name</label>
-
 <input type="text" name="Business Name" required>
 
 <label>Phone Number</label>
-
 <input type="text" name="Phone Number" required>
 
 <label>Business Type</label>
@@ -155,15 +262,10 @@ graphics that attract customers and make your business stand out.
 <select name="Business Type">
 
 <option>Retail / Shop</option>
-
 <option>Restaurant / Cafe</option>
-
 <option>Service</option>
-
 <option>Health / Clinic</option>
-
 <option>Education / Coaching</option>
-
 <option>Other</option>
 
 </select>
@@ -173,19 +275,15 @@ graphics that attract customers and make your business stand out.
 <select name="Advertisement Type">
 
 <option>Poster</option>
-
 <option>Banner</option>
-
 <option>Logo</option>
 
 </select>
 
 <label>Short Details</label>
-
 <textarea name="Details"></textarea>
 
 <label>Primary Color</label>
-
 <input type="color" name="Primary Color" value="#00ffff">
 
 <button type="submit">Submit Info</button>
