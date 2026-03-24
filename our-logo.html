@@ -16,13 +16,14 @@ body{
 margin:0;
 background:#0a0f1e;
 color:#e6eef6;
-font-family:sans-serif;
+font-family:'Inter',sans-serif;
 padding:30px;
 text-align:center;
+overflow-x:hidden;
 }
 
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 }
 
@@ -39,20 +40,32 @@ color:#0ff;
 text-decoration:none;
 margin-left:15px;
 font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:white;
 }
 
 /* CARD */
 .card{
 background:#1a1f33;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+animation:fadeIn 1s ease;
 }
 
 /* LOGO */
 .logo-img{
-width:180px;
-margin:20px 0;
+width:200px;
+margin:30px 0;
+transition:0.4s;
+}
+
+.logo-img:hover{
+transform:scale(1.1);
+filter:drop-shadow(0 0 20px gold);
 }
 
 /* TEXT */
@@ -62,8 +75,55 @@ color:#0ff;
 
 p{
 color:#94a3b8;
-line-height:1.6;
-margin-top:10px;
+line-height:1.8;
+font-size:16px;
+margin-top:12px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight{
+background:#11162a;
+padding:20px;
+border-radius:12px;
+margin-top:20px;
+transition:0.3s;
+}
+
+.highlight:hover{
+background:#0ff;
+color:black;
+transform:scale(1.03);
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 22px;
+background:#0ff;
+color:black;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#06f;
+color:white;
+transform:scale(1.05);
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -93,58 +153,67 @@ margin-top:10px;
 
 <h1>Our Logo</h1>
 
-<!-- LOGO IMAGE -->
 <img src="/logo.png" alt="Arvind Ad Studio Logo" class="logo-img">
 
 <p>
-Our logo represents creativity, growth and premium design — the core values of our studio.
+Our logo is not just a symbol — it is a reflection of our vision, creativity and commitment to excellence.
+Every element is carefully designed to represent growth, clarity and powerful branding.
 </p>
 
 <h2>Meaning Behind the Logo</h2>
 
 <p>
-Our logo is designed with a deep and clear purpose.
-The letter <b>A</b> stands for Arvind and <b>S</b> stands for Studio.
+At first glance, the logo appears simple — but every detail carries meaning.
 </p>
 
-<p>
-At the center of the logo, the design represents our core work —
+<div class="highlight">
+The letter <b>A</b> represents Arvind — the creative mind behind the studio,
+while <b>S</b> stands for Studio — a space where ideas turn into impactful designs.
+</div>
+
+<div class="highlight">
+At the center, the design reflects our core purpose —
 <b>advertising, creativity and business growth</b>.
-It shows how we help businesses move forward and stand out in the market.
-</p>
+It symbolizes how we transform ordinary businesses into powerful brands.
+</div>
+
+<div class="highlight">
+The upward arrow represents <b>progress, success and continuous growth</b> —
+our promise to take every client forward.
+</div>
+
+<div class="highlight">
+The golden tone reflects <b>premium quality, trust and excellence</b> —
+the standard we maintain in every design.
+</div>
 
 <p>
-The upward arrow symbolizes <b>growth, success and progress</b>.
-It reflects our mission to take our clients’ business to the next level.
-</p>
-
-<p>
-The golden color represents <b>premium quality, trust and value</b>,
-which we aim to deliver in every design.
-</p>
-
-<p>
-This logo is not just a design — it is a symbol of the results we deliver.
+This logo is not just designed to look good —  
+it is designed to communicate strength, clarity and results.
 </p>
 
 <h2>Why Our Logo is Unique</h2>
 
 <p>
-We designed our logo to be simple, meaningful and powerful.
-It is easy to recognize, easy to remember and reflects our creative thinking.
+In a world full of complex designs, we believe in simplicity with meaning.
+Our logo is clean, memorable and powerful — designed to stay in people's minds.
 </p>
-
-<h2>Want a Logo Like This?</h2>
 
 <p>
-We create professional logos that help your business stand out and grow.
+It is not overloaded with elements, yet it communicates everything clearly —
+which is the true power of great design.
 </p>
 
-<a href="index.html" style="color:#0ff; font-weight:600;">Request a Logo →</a>
+<p>
+We don’t just design logos — we build identities that people remember.
+</p>
+
+<a href="index.html" class="btn">Start Your Brand Journey →</a>
 
 </div>
 
 </div>
 
 </body>
+
 </html>
