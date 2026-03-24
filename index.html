@@ -8,9 +8,14 @@
 
 <meta name="google-site-verification" content="ym0sI3D6TCNZviOC1ryAURFXJ7SZ5yKGP2MHxezA1eQ">
 
-<meta name="description" content="Arvind Ad Studio provides professional logo, poster and banner design services.">
+<meta name="description" content="Arvind Ad Studio provides professional logo, poster and banner design services for businesses.">
 
-<title>Arvind Ad Studio</title>
+<meta name="keywords" content="logo design, poster design, banner design, advertising agency">
+
+<meta name="author" content="Arvind Raj">
+<meta name="robots" content="index, follow">
+
+<title>Arvind Ad Studio | Creative Advertising</title>
 
 <!-- ✅ FAVICON -->
 <link rel="icon" href="/favicon-new.png">
@@ -38,26 +43,25 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 }
 
 .logo img{
 height:45px;
-display:block;
 }
 
-/* NAV LINKS */
 nav a{
 color:#0ff;
 text-decoration:none;
 margin-left:20px;
 font-weight:600;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -65,54 +69,76 @@ color:white;
 }
 
 /* HERO */
+.hero{
+margin-bottom:50px;
+}
+
 .hero h1{
+font-size:36px;
 color:#0ff;
 }
 
 .hero p{
 color:#94a3b8;
+max-width:600px;
 }
 
 /* CARD */
 .card{
 background:#1a1f33;
-padding:25px;
+padding:30px;
 border-radius:15px;
-margin-top:30px;
+margin-bottom:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* SERVICES */
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 margin-top:20px;
 }
 
 .service-box{
 background:#11162a;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.service-box:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,255,255,0.2);
 }
 
 /* FORM */
+label{
+display:block;
+margin-top:15px;
+}
+
 input,select,textarea{
 width:100%;
-padding:10px;
-margin-top:10px;
-border-radius:6px;
+padding:12px;
+border-radius:8px;
 border:1px solid #444;
 background:#111;
 color:white;
 }
 
 button{
-margin-top:15px;
-padding:10px;
+margin-top:20px;
 background:#0ff;
-border:none;
-border-radius:6px;
+border:0;
+padding:14px;
+border-radius:10px;
 cursor:pointer;
+font-weight:600;
+}
+
+button:hover{
+background:#06f;
 }
 
 </style>
@@ -127,7 +153,6 @@ cursor:pointer;
 <nav>
 
 <div class="logo">
-<!-- ✅ FIXED LOGO PATH -->
 <img src="/logo.png" alt="Arvind Ad Studio Logo">
 <strong>Arvind Ad Studio</strong>
 </div>
@@ -144,8 +169,14 @@ cursor:pointer;
 
 <!-- HERO -->
 <div class="hero">
+
 <h1>Creative Advertising That Makes Businesses Stand Out 🚀</h1>
-<p>We design logos, posters and banners that attract customers.</p>
+
+<p>
+We design <b>logos, posters and banners</b> that attract attention,
+build trust and grow your business.
+</p>
+
 </div>
 
 <!-- SERVICES -->
@@ -157,37 +188,89 @@ cursor:pointer;
 
 <div class="service-box">
 <h3>Logo Design</h3>
-<p>Memorable brand identity.</p>
+<p>Memorable brand identity for your business.</p>
+<a href="logo-design.html" style="color:#0ff;">Learn More →</a>
 </div>
 
 <div class="service-box">
 <h3>Poster Design</h3>
-<p>Creative and attractive posters.</p>
+<p>Creative posters that grab instant attention.</p>
+<a href="poster-design.html" style="color:#0ff;">Learn More →</a>
 </div>
 
 <div class="service-box">
 <h3>Banner Design</h3>
-<p>Powerful promotional banners.</p>
+<p>Powerful banners to promote your business.</p>
+<a href="banner-design.html" style="color:#0ff;">Learn More →</a>
 </div>
 
 </div>
 
 </div>
 
-<!-- CONTACT -->
+<!-- ABOUT -->
 <div class="card">
 
-<h2>Client Request</h2>
+<h2>About Us</h2>
+
+<p>
+Arvind Ad Studio helps businesses grow with creative and modern advertising.
+We create logos, posters and banners that make your brand stand out.
+</p>
+
+<p>
+Good advertising attracts customers…  
+<b>Great advertising makes them remember you.</b>
+</p>
+
+</div>
+
+<!-- CLIENT FORM -->
+<div class="card">
+
+<h2>Client Request Form</h2>
 
 <form action="https://formsubmit.co/artofadvertisement7@gmail.com" method="POST">
 
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Client Request">
 
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="email" name="Email" placeholder="Your Email" required>
-<textarea name="Details" placeholder="Your Requirement"></textarea>
+<label>Name</label>
+<input type="text" name="Name" required>
 
-<button type="submit">Submit</button>
+<label>Email</label>
+<input type="email" name="Email" required>
+
+<label>Business Name</label>
+<input type="text" name="Business Name" required>
+
+<label>Phone Number</label>
+<input type="text" name="Phone Number" required>
+
+<label>Business Type</label>
+<select name="Business Type">
+<option>Retail / Shop</option>
+<option>Restaurant / Cafe</option>
+<option>Service</option>
+<option>Health / Clinic</option>
+<option>Education / Coaching</option>
+<option>Other</option>
+</select>
+
+<label>Advertisement Type</label>
+<select name="Advertisement Type">
+<option>Logo</option>
+<option>Poster</option>
+<option>Banner</option>
+</select>
+
+<label>Short Details</label>
+<textarea name="Details"></textarea>
+
+<label>Primary Color</label>
+<input type="color" name="Primary Color" value="#00ffff">
+
+<button type="submit">Submit Request</button>
 
 </form>
 
