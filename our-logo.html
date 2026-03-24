@@ -2,29 +2,26 @@
 <html lang="en">
 
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Our Logo | Arvind Ad Studio</title>
-
+<title>Our Logo Story | Arvind Ad Studio</title>
 <link rel="icon" href="/favicon-new.png">
 
 <style>
 
 body{
 margin:0;
-background:#0a0f1e;
+background:linear-gradient(135deg,#050814,#0a0f1e);
 color:#e6eef6;
 font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
 
-/* CONTAINER */
 .container{
-max-width:1000px;
+max-width:900px;
 margin:auto;
-padding:30px;
+padding:40px 25px;
 }
 
 /* NAV */
@@ -32,13 +29,13 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 nav a{
 color:#0ff;
 text-decoration:none;
-margin-left:20px;
+margin-left:18px;
 font-weight:600;
 }
 
@@ -49,8 +46,10 @@ margin-top:40px;
 }
 
 .hero h1{
-font-size:38px;
-color:#0ff;
+font-size:42px;
+background:linear-gradient(90deg,#0ff,#00aaff,#0ff);
+-webkit-background-clip:text;
+color:transparent;
 opacity:0;
 transform:translateY(30px);
 transition:1s;
@@ -58,8 +57,6 @@ transition:1s;
 
 .hero p{
 color:#94a3b8;
-max-width:600px;
-margin:auto;
 margin-top:15px;
 opacity:0;
 transform:translateY(30px);
@@ -69,49 +66,67 @@ transition:1s;
 /* LOGO */
 .logo-box{
 text-align:center;
-margin:60px 0;
+margin:80px 0;
+position:relative;
+}
+
+.logo-glow{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:280px;
+height:280px;
+background:radial-gradient(circle,rgba(255,215,0,0.3),transparent);
+filter:blur(40px);
+animation:pulse 3s infinite;
 }
 
 .logo-img{
-width:220px;
+width:200px;
+position:relative;
 animation:float 4s ease-in-out infinite;
-transition:0.4s;
-}
-
-.logo-img:hover{
-transform:scale(1.1);
-filter:drop-shadow(0 0 30px gold);
 }
 
 @keyframes float{
 0%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
+50%{transform:translateY(-10px);}
 100%{transform:translateY(0);}
 }
 
-/* STORY SECTIONS */
-.section{
-margin-top:50px;
+@keyframes pulse{
+0%{opacity:0.5;}
+50%{opacity:1;}
+100%{opacity:0.5;}
+}
+
+/* STORY */
+.story{
+margin:70px 0;
+text-align:center;
 opacity:0;
 transform:translateY(40px);
 transition:1s;
 }
 
-.section h2{
+.story h2{
 color:#0ff;
+margin-bottom:10px;
 }
 
-.section p{
+.story p{
 color:#94a3b8;
 line-height:1.8;
+max-width:650px;
+margin:auto;
 }
 
-/* HIGHLIGHT BOX */
+/* HIGHLIGHT */
 .highlight{
-background:#11162a;
-padding:20px;
-border-radius:12px;
 margin-top:20px;
+padding:20px;
+background:#11162a;
+border-radius:12px;
 transition:0.4s;
 }
 
@@ -124,14 +139,14 @@ transform:scale(1.05);
 /* CTA */
 .cta{
 text-align:center;
-margin-top:60px;
+margin-top:80px;
 opacity:0;
 transition:1s;
 }
 
 .btn{
-padding:14px 25px;
-background:#0ff;
+padding:15px 28px;
+background:linear-gradient(90deg,#0ff,#00aaff);
 color:black;
 border-radius:10px;
 text-decoration:none;
@@ -143,7 +158,7 @@ background:#06f;
 color:white;
 }
 
-/* SHOW */
+/* SHOW ANIMATION */
 .show{
 opacity:1 !important;
 transform:translateY(0) !important;
@@ -170,87 +185,97 @@ transform:translateY(0) !important;
 
 <!-- HERO -->
 <div class="hero">
-<h1 class="reveal">Not Just a Logo — A Story</h1>
+<h1 class="reveal">A Logo That Speaks Before Words</h1>
 <p class="reveal">
-Every great brand begins with a powerful identity.  
-This is the story behind ours.
+Before a customer reads your name,  
+they see your identity.
 </p>
 </div>
 
 <!-- LOGO -->
 <div class="logo-box">
-<img src="/logo.png" class="logo-img">
+<div class="logo-glow"></div>
+<img src="/logo.png" class="logo-img" alt="Arvind Ad Studio Logo">
 </div>
 
-<!-- STORY -->
-<div class="section reveal">
-<h2>The Beginning</h2>
+<!-- STORY FLOW -->
+
+<div class="story reveal">
+<h2>Where It Begins</h2>
 <p>
-The logo begins with simplicity — because true design does not need noise.
-It starts with clarity, just like every successful brand.
+Every strong brand starts with one thing — clarity.  
+Not noise. Not decoration. Just a clear idea with purpose.
 </p>
 </div>
 
-<div class="section reveal">
+<div class="story reveal">
 <h2>The Identity</h2>
 <div class="highlight">
-The letter <b>A</b> represents Arvind — the creator, the thinker.  
-<b>S</b> represents Studio — the place where ideas become reality.
+<b>A</b> represents Arvind — the vision, the thinking, the direction.  
+<b>S</b> represents Studio — where ideas are shaped into reality.
 </div>
 </div>
 
-<div class="section reveal">
-<h2>The Purpose</h2>
+<div class="story reveal">
+<h2>The Core</h2>
 <div class="highlight">
-At the center lies our core mission —  
-advertising, creativity and business growth.  
-We turn ideas into powerful brand identities.
+At the center lies our real work —  
+advertising that attracts, design that connects,  
+and ideas that grow businesses.
 </div>
 </div>
 
-<div class="section reveal">
-<h2>The Growth</h2>
+<div class="story reveal">
+<h2>The Direction</h2>
 <div class="highlight">
-The upward movement symbolizes progress.  
-Every design we create is built to move businesses forward.
+The upward movement is not design — it is intention.  
+Every line points toward progress, success and growth.
 </div>
 </div>
 
-<div class="section reveal">
+<div class="story reveal">
 <h2>The Standard</h2>
 <div class="highlight">
-The golden tone reflects premium quality, trust and excellence —  
-because average is never our goal.
+The golden tone is not just color —  
+it reflects trust, quality and premium thinking.
 </div>
 </div>
 
-<div class="section reveal">
+<div class="story reveal">
 <h2>The Philosophy</h2>
 <p>
-In a world full of complex designs, we believe in simplicity with meaning.  
-Not just something that looks good — but something that stays remembered.
+Many designs look good.  
+Few designs are remembered.  
+
+We create the kind that stays.
+</p>
+</div>
+
+<div class="story reveal">
+<h2>The Message</h2>
+<p>
+A logo is not just seen.  
+It is felt. It is remembered. It becomes identity.
 </p>
 </div>
 
 <!-- CTA -->
 <div class="cta reveal">
-<p>We don’t just design logos — we build identities.</p>
-<a href="index.html" class="btn">Start Your Brand Journey →</a>
+<p>We don’t just design logos — we build what people remember.</p>
+<a href="index.html" class="btn">Start Your Brand →</a>
 </div>
 
 </div>
 
-<!-- SCROLL SCRIPT -->
+<!-- SCROLL ANIMATION -->
 <script>
 
 const elements = document.querySelectorAll('.reveal');
 
 window.addEventListener('scroll', () => {
 elements.forEach(el => {
-const position = el.getBoundingClientRect().top;
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
+const pos = el.getBoundingClientRect().top;
+if(pos < window.innerHeight - 100){
 el.classList.add('show');
 }
 });
